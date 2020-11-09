@@ -93,12 +93,14 @@ class _HousesState extends State<Houses> {
                   ),
                 ),
                 SizedBox(width: 10,),
-                Text(
-                  '\$${house.address}',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                      fontSize: 15,
-                      color: black.withOpacity(0.4)
+                Expanded(
+                  child: Text(
+                    '\$${house.address}',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: black.withOpacity(0.4)
+                    ),
                   ),
                 ),
               ],
