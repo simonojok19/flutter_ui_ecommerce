@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../constants/constants.dart';
 import '../../../constants/constants.dart';
 import '../../../constants/constants.dart';
+import '../../../constants/constants.dart';
 
 class CustomAppBar extends StatelessWidget {
   @override
@@ -17,6 +18,8 @@ class CustomAppBar extends StatelessWidget {
       child: Container(
         height: size.height * 0.22,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,7 +51,29 @@ class CustomAppBar extends StatelessWidget {
                   ),
                 )
               ],
-            )
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'City',
+                  style: TextStyle(
+                    color: black.withOpacity(0.4),
+                    fontSize: 18,
+                  ),
+                ),
+                SizedBox(height: size.height * 0.01,),
+                Text(
+                  'San Francisco',
+                  style: TextStyle(
+                    color: black,
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+              ],
+            ),
+            Divider()
           ],
         ),
       ),
