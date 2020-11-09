@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'components/categories.dart';
 import 'components/custom_app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,7 +9,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          CustomAppBar()
+          CustomAppBar(),
+          Categories()
         ],
       ),
     );
