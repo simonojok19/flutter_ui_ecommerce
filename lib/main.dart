@@ -1,5 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:real_estate_app/screens/home/home_screen.dart';
+
+import 'constants/constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,8 +15,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        scaffoldBackgroundColor: white
       ),
+      home: HomeScreen(),
     );
   }
 }
