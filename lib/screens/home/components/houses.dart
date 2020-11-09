@@ -39,7 +39,7 @@ class _HousesState extends State<Houses> {
     House house = houseList[index];
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (_) => DetailsScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (_) => DetailsScreen(house: house)));
       },
       child: Padding(
         padding: EdgeInsets.symmetric(
