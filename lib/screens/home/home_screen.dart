@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
+import 'components/bottom_buttons.dart';
 import 'components/categories.dart';
 import 'components/custom_app_bar.dart';
 import 'components/houses.dart';
@@ -8,11 +10,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
+        alignment: Alignment.bottomCenter,
         children: [
-          CustomAppBar(),
-          Categories(),
-          Houses(),
+          Column(
+            children: [
+              CustomAppBar(),
+              Categories(),
+              Houses(),
+            ],
+          ),
+          BottomButtons(),
         ],
       ),
     );
