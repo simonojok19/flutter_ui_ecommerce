@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:real_estate_app/screens/details/components/carousel_images.dart';
 
 import '../../model/house.dart';
+import 'components/bottom_buttons.dart';
 import 'components/custom_app_bar.dart';
+import 'components/house_details.dart';
 
 class DetailsScreen extends StatefulWidget {
   final House house;
@@ -16,16 +18,25 @@ class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
+        alignment: Alignment.bottomCenter,
         children: [
-          Stack(
+          Column(
             children: [
-              CarouselImages(
-                moreImagesUrl: widget.house.moreImagesUrl,
+              Stack(
+                children: [
+                  CarouselImages(
+                    moreImagesUrl: widget.house.moreImagesUrl,
+                  ),
+                  CustomAppBar(),
+                ],
               ),
-              CustomAppBar(),
+              HouseDetails(
+                house: widget.house
+              )
             ],
-          )
+          ),
+          BottomButtons()
         ],
       ),
     );
