@@ -104,6 +104,32 @@ class _HousesState extends State<Houses> {
                   ),
                 ),
               ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '${house.bedRooms} bedrooms / ',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                Text(
+                  '${house.bathRooms} bathrooms / ',
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+                Text(
+                  '${house.sqFeet} sqFT',
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+              ],
             )
           ],
         ),
